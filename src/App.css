@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1, h2 {
+  color: #333;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Estilo para el buscardor */
+.search-container {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.1em;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0066ff;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0052cc;
+}
+
+/* Estilo para los personajes */
+.personaje-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.personaje-card:hover {
+  transform: scale(1.05);
+}
+
+.personaje-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.personaje-card h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.personaje-card p {
+  color: #666;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.personaje-card .estado {
+  font-weight: bold;
+  color: #0066ff;
+}
+
+/* Estilo para la lista de personajes */
+.personajes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.personajes-list .personaje-card {
+  flex-basis: 220px;
+}
+
+@media (max-width: 768px) {
+  .personajes-list {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  input {
+    width: 250px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
